@@ -6,20 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>video</title>
     <style>
+        * {
+            box-sizing: border-box;
+            text-align: center;
+        }
         #cuerpo {
             background-color: rgb(4, 4, 46);
         }
-        #inicio {
+        #inicio  {
             color: white;
+            background-color: rgb(42, 36, 89);
         }
     </style>
 </head>
 <body id="cuerpo">
-    <div>
-        <iframe width="750" height="415" src="https://www.youtube.com/embed/_tA5cinv0U8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-    <div>
-        <a id="inicio" href="index.html">inicio</a>
+    <div id="main">
+        <div>
+            <iframe width="750" height="415" src="https://www.youtube.com/embed/_tA5cinv0U8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div id="inicio">
+            <a id="inicio" href="index.html">inicio</a>
+        </div>
     </div>
 </body>
 </html>

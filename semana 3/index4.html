@@ -4,40 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tipos</title>
+    <title>5 Tipos de IA</title>
     <style>
-        #cuerpo {
+        * {
+            box-sizing: border-box;
+            text-align: center;
+        }
+        #General {
             background-color: rgb(4, 4, 46);
+            position: absolute;
+            width: auto;
         }
         #lista {
             color: white;
         }
-        #titulo {
+        #header {
+            background-color: rgb(42, 36, 89);
             color: orangered;
+            width: 100%;
+            height: 60px;
+            float:left
         }
-        #imagen {
+        #imagen img {
             width: 750px;
             height: 400px;
         }
-        a {
+        #link {
             color: white;
+        }
+        #Inicio  {
+            color: white;
+            background-color: rgb(42, 36, 89);
         }
     </style>
 </head>
-<body id="cuerpo">
-    <div>
-        <h1 id="titulo">5 Tipos de IA</h1>
-        <ol id="lista">
-            <li>Agentes inteligentes.</li>
-            <li>Robótica.</li>
-            <li>Deep learning.</li>
-            <li>Redes neuronales artificiales.</li>
-            <li>Sistemas expertos.</li>
-        </ol>
-        <img id="imagen" src="IMG/IA4.jpg" alt="IA">
-    </div>
-    <div>
-        <a href="index.html">Inicio</a>
+<body>
+    <div id="General">
+        <div id="header">
+            <h1>5 Tipos de IA</h1>
+        </div>
+        <div id="main">
+            <div  id="lista">
+                <ol>
+                    <li>Inteligencia Artificial General (AGI): Se refiere a sistemas de inteligencia artificial que tienen la capacidad de comprender, aprender, razonar y realizar tareas en diversos dominios de manera similar a los seres humanos. Los sistemas AGI tienen una amplia gama de habilidades y pueden adaptarse a nuevas situaciones de manera flexible.</li>
+                    <li>Inteligencia Artificial Específica (ASI): Se refiere a sistemas de inteligencia artificial diseñados para tareas y dominios específicos. Estos sistemas están optimizados para realizar una tarea particular de manera eficiente y precisa. A diferencia de la AGI, la ASI se enfoca en una tarea específica y no tiene la capacidad de transferir su conocimiento a otras áreas.</li>
+                    <li>Inteligencia Artificial Débil (IA débil): Se refiere a sistemas de inteligencia artificial que están diseñados para realizar tareas específicas pero que carecen de conciencia o comprensión contextual. Estos sistemas pueden parecer inteligentes en un contexto limitado, pero no tienen una comprensión real de su entorno ni la capacidad de pensar o aprender de manera autónoma.</li>
+                    <li>Inteligencia Artificial Fuerte (IA fuerte): Se refiere a sistemas de inteligencia artificial que poseen una conciencia o una comprensión contextual y tienen la capacidad de aprender y adaptarse de manera similar a los seres humanos. Estos sistemas son capaces de comprender y razonar en un nivel similar al humano y pueden realizar una amplia gama de tareas de manera autónoma.</li>
+                    <li>Inteligencia Artificial Emocional (IA emocional): Se refiere a sistemas de inteligencia artificial que tienen la capacidad de reconocer, comprender y simular las emociones humanas. Estos sistemas pueden interactuar de manera más natural y empática con los seres humanos, reconociendo expresiones faciales, tonos de voz y otros indicadores emocionales para responder de manera adecuada. La IA emocional se utiliza en aplicaciones como asistentes virtuales, terapia virtual y juegos interactivos.</li>
+                </ol>
+            </div>
+            <div id="imagen">
+                <img src="IMG/IA4.jpg" alt="IA">
+            </div>
+        </div>
+        <div id="Inicio">
+            <a id="link" href="index.html">Inicio</a>
+        </div>
     </div>
 </body>
 </html>
