@@ -12,10 +12,10 @@
                 <a class="nav-link" href="https://paginas-web-cr.com/ApiPHP/">Api</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <a class="nav-link dropdown-toggle" href="" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">cursos</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownId">
-                    <a class="dropdown-item" href="#">Action 1</a>
-                    <a class="dropdown-item" href="#">Action 2</a>
+                    <a class="dropdown-item" href="listarcurso.html">Listar Curso</a>
+                    <a class="dropdown-item" href="crearcurso.html">Curso</a>
                 </div>
             </li>
         </ul>
