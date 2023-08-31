@@ -33,3 +33,4 @@ formulario.addEventListener('submit', function(e)
 function completeInsert(){
     window.location = 'Listarcurso.html';
 }
+

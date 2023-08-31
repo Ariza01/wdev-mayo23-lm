@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+.container {
+    border-radius: 20px;
+    background-color: transparent;
+    width: 600px;
+    margin-top: 100px;
+    border: 2px solid rgba(255,255,255,0.5);
+}
+.form-control {
+    background: transparent;
+}
+.form-label{
+    color: white;
+}
+body {
+    background-color: rgb(2, 11, 30);
+}
+.mb-3 {
+    background: transparent;
+}

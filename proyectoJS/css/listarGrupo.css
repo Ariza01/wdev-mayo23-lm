@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+body {
+    background-color: rgb(2, 11, 30);
+}
+.table-responsive {
+    background: rgb(94, 102, 126);
+    
+}

@@ -35,7 +35,7 @@ function ajustardatostabla(datos){
         // console.log("//////////")
 
         tablaresultado.innerHTML += `
-            <tr class="table-primary" >
+            <tr class="table" >
                 <td scope="row">${objetoindividual.id}</td>
                 <td>${objetoindividual.cedula}</td>
                 <td>${objetoindividual.correoelectronico}</td>
@@ -55,7 +55,6 @@ function ajustardatostabla(datos){
                     ||
                     <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')">Eliminar</a>
                 </td>
-                
             </tr>
         `;
     }
