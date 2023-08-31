@@ -1,17 +1,17 @@
 var formulario = document.getElementById('formulario');
 const modalSuccess = new bootstrap.Modal(document.getElementById('modalSuccess'),);
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
-var apicrer = "InsertarCursos.php";
+var apicrer = "InsertarGrupo.php";
 
 formulario.addEventListener('submit', function(e)
 {
     e.preventDefault();
 
     var datosEnviar = {
+        "id":document.getElementById('id').value,
+
         "nombre":document.getElementById('nombre').value,
-        "descripcion":document.getElementById('descripcion').value,
-        "tiempo":document.getElementById('tiempo').value,
-        "usuario":"Santiago Ariza"
+
     }
 
     apiurl = apibase + apicrer;
@@ -31,5 +31,5 @@ formulario.addEventListener('submit', function(e)
 });
 
 function completeInsert(){
-    window.location = 'Listarcurso.html';
+    window.location = 'ListarGrupo.html';
 }

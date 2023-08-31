@@ -6,9 +6,6 @@
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav me-auto mt-2 mt-lg-0">
             <li class="nav-item">
-                <a class="nav-link active" href="listarcurso.html" aria-current="page">Listar Curso<span class="visually-hidden">(current)</span></a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="https://paginas-web-cr.com/ApiPHP/">Api</a>
             </li>
             <li class="nav-item dropdown">
@@ -16,6 +13,27 @@
                 <div class="dropdown-menu" aria-labelledby="dropdownId">
                     <a class="dropdown-item" href="listarcurso.html">Listar Curso</a>
                     <a class="dropdown-item" href="crearcurso.html">Curso</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profesores</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="listarProfesor.html">Lista Profesores</a>
+                    <a class="dropdown-item" href="crearProfesor.html">Profesores</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Estudiantes</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="listarEstudiantes.html">Lista Estudiantes</a>
+                    <a class="dropdown-item" href="crearEstudiantes.html">Estudiantes</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Grupo</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="listarGrupo.html">Lista Grupo</a>
+                    <a class="dropdown-item" href="crearGrupo.html">Grupo</a>
                 </div>
             </li>
         </ul>

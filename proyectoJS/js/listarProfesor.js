@@ -1,7 +1,7 @@
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
-var apiconsultar = "ListaCurso.php";
-var apieliminar = "BorrarCursos.php";
-var apieditar = "ActualizarCursos.php";
+var apiconsultar = "ListaProfesores.php";
+var apieliminar = "BorrarProfesores.php";
+var apieditar = "ActualizarProfesores.php";
 
 const myModalEliminar = new bootstrap.Modal(document.getElementById('myModalEliminar'))
 const myModalEditar = new bootstrap.Modal(document.getElementById('myModalEditar'))
@@ -37,9 +37,18 @@ function ajustardatostabla(datos){
         tablaresultado.innerHTML += `
             <tr class="table-primary" >
                 <td scope="row">${objetoindividual.id}</td>
+                <td>${objetoindividual.cedula}</td>
+                <td>${objetoindividual.correoelectronico}</td>
+                <td>${objetoindividual.telefono}</td>
+                <td>${objetoindividual.telefonocelular}</td>
+                <td>${objetoindividual.fechanacimiento}</td>
+                <td>${objetoindividual.sexo}</td>
+                <td>${objetoindividual.direccion}</td>
                 <td>${objetoindividual.nombre}</td>
-                <td>${objetoindividual.descripcion}</td>
-                <td>${objetoindividual.tiempo}</td>
+                <td>${objetoindividual.apellidopaterno}</td>
+                <td>${objetoindividual.apellidomaterno}</td>
+                <td>${objetoindividual.idCarreras}</td>
+                <td>${objetoindividual.nacionalidad}</td>
                 <td>${objetoindividual.usuario}</td>
                 <td>
                     <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
@@ -84,14 +93,22 @@ function  completeDelete(){
     consultardatos();
 }
 
-function mostrarEditarModal(id, nombre, descripcion, tiempo){
+function mostrarEditarModal(id, cedula, correoelectronico, telefono, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, idCarreras, nacionalidad){
     document.getElementById('id').value = id;
+    document.getElementById('cedula').value = cedula;
+    document.getElementById('correoelectronico').value = correoelectronico;
+    document.getElementById('telefono').value = telefono;
+    document.getElementById('telefonocelular').value = telefonocelular;
+    document.getElementById('fechanacimiento').value = fechanacimiento;
+    document.getElementById('sexo').value = sexo;
+    document.getElementById('direccion').value = direccion;
     document.getElementById('nombre').value = nombre;
-    document.getElementById('descripcion').value = descripcion;
-    document.getElementById('tiempo').value = tiempo;
+    document.getElementById('apellidopaterno').value = apellidopaterno;
+    document.getElementById('apellidomaterno').value = apellidomaterno;
+    document.getElementById('idCarreras').value = idCarreras;
+    document.getElementById('nacionalidad').value = nacionalidad;
     myModalEditar.show();
 }
-
 
 formulario.addEventListener('submit', function(e)
 {
@@ -100,10 +117,19 @@ formulario.addEventListener('submit', function(e)
 
     var datosEnviar = { 
         "id":document.getElementById('id').value ,
+        "cedula":document.getElementById('cedula').value ,
+        "correoelectronico":document.getElementById('correoelectronico').value ,
+        "telefono":document.getElementById('telefono').value ,
+        "telefonocelular":document.getElementById('telefonocelular').value ,
+        "fechanacimiento":document.getElementById('fechanacimiento').value ,
+        "sexo":document.getElementById('sexo').value ,
+        "direccion":document.getElementById('direccion').value ,
         "nombre":document.getElementById('nombre').value ,
-        "descripcion":document.getElementById('descripcion').value ,
-        "tiempo":document.getElementById('tiempo').value ,
-        "usuario":"Santiago Ariza"
+        "apellidopaterno":document.getElementById('apellidopaterno').value ,
+        "apellidomaterno":document.getElementById('apellidomaterno').value ,
+        "idCarreras":document.getElementById('idCarreras').value ,
+        "usuario":"Santiago Ariza",
+        "nacionalidad":document.getElementById('nacionalidad').value
     }
 
     apiurl = apibase + apieditar ;
