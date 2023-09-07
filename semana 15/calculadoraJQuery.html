@@ -66,9 +66,18 @@
 
                 $("#resultado").text(numero1 / numero2);
                });
+               
+            $("#ocultar").click(function (e) {
+               e.preventDefault();
+               $("#contenedor1").hide();
             });
+            $(mostrar).click(function (e) { 
+              e.preventDefault();
+              $(contenedor1).show();
+            });
+            });
+            
     </script>
-
 
 
 </head>
@@ -79,7 +88,7 @@
   <main>
     <h3>Calculadora con jquery</h3>
     <div class="container">
-        <div class="mb-3">
+        <div class="mb-3" id="contenedor1">
           <label for="" class="form-label">numero1</label>
           <input type="number"
             class="form-control" name="" id="numero1" aria-describedby="helpId" placeholder="">
@@ -95,6 +104,9 @@
         <a name="Resta" id="Resta" class="btn btn-danger" href="#" role="button">Resta</a>
         <a name="Multiplicar" id="Multiplicar" class="btn btn-primary" href="#" role="button">Multiplicar</a>
         <a name="Divicion" id="Divicion" class="btn btn-warning" href="#" role="button">Divicion</a>
+
+        <a name="ocultar" id="ocultar" class="btn btn-outline-secondary" href="#" role="button">ocultar</a>
+        <a name="mostrar" id="mostrar" class="btn btn-warning" href="#" role="button">mostrar</a>
     </div>
     <div class="container" id="marco">
         <span id="resultado">....</span>
