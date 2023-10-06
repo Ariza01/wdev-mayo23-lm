@@ -3,6 +3,7 @@ const modalSuccess = new bootstrap.Modal(document.getElementById('modalSuccess')
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
 var apicrer = "InsertarCursos.php";
 
+
 formulario.addEventListener('submit', function(e)
 {
     e.preventDefault();

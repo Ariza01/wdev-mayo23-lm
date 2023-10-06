@@ -1,7 +1,7 @@
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
-var apiconsultar = "ListaCurso.php";
-var apieliminar = "BorrarCursos.php";
-var apieditar = "ActualizarCursos.php";
+var apiconsultar = "ListaGrupo.php";
+var apieliminar = "BorrarGrupo.php";
+var apieditar = "ActualizarGrupo.php";
 
 var url =  apibase + apiconsultar;
 var urlBorrar = apibase + apieliminar
@@ -37,11 +37,8 @@ function ajustardatostabla(response){
     for (const objetoindividual of response) {
         tablaresultado.innerHTML += `
             <tr class="table" >
-                <td scope="row">${objetoindividual.id}</td>
-                <td>${objetoindividual.nombre}</td>
-                <td>${objetoindividual.descripcion}</td>
-                <td>${objetoindividual.tiempo}</td>
-                <td>${objetoindividual.usuario}</td>
+            <td scope="row">${objetoindividual.id}</td>
+            <td>${objetoindividual.nombre}</td>
                 <td>
                     <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
                     ||
@@ -83,11 +80,10 @@ function  completeDelete(){
 
 // --------------APARTADO DE EDITAR -------------
 
-function mostrarEditarModal(id, nombre, descripcion, tiempo){
+function mostrarEditarModal(id, nombre){
     $("#id").val(id);
     $("#nombre").val(nombre);
-    $("#descripcion").val(descripcion);
-    $("#tiempo").val(tiempo);
+  
     myModalEditar.show();
 }
 
@@ -99,8 +95,6 @@ $("#btnEditar").click(function (e) {
     var datosEnviar = { 
         "id":$("#id").val(),
         "nombre":$("#nombre").val(),
-        "descripcion":$("#descripcion").val(),
-        "tiempo":$("#tiempo").val(),
         "usuario":"Santiago Ariza"
     }
     $.ajax({
@@ -119,8 +113,6 @@ $("#btnEditar").click(function (e) {
 
 function completeEdit(){
     modalSuccess.hide();
-    window.location = 'listarCursos.html'
+    window.location = 'listarGrupo.html'
 }
 });
-
-

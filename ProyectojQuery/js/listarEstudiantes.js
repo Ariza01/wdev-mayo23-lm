@@ -1,7 +1,7 @@
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
-var apiconsultar = "ListaCurso.php";
-var apieliminar = "BorrarCursos.php";
-var apieditar = "ActualizarCursos.php";
+var apiconsultar = "ListaEstudiantes.php";
+var apieliminar = "BorrarEstudiantes.php";
+var apieditar = "ActualizarEstudiantes.php";
 
 var url =  apibase + apiconsultar;
 var urlBorrar = apibase + apieliminar
@@ -38,9 +38,18 @@ function ajustardatostabla(response){
         tablaresultado.innerHTML += `
             <tr class="table" >
                 <td scope="row">${objetoindividual.id}</td>
+                <td>${objetoindividual.cedula}</td>
+                <td>${objetoindividual.correoelectronico}</td>
+                <td>${objetoindividual.telefono}</td>
+                <td>${objetoindividual.telefonocelular}</td>
+                <td>${objetoindividual.fechanacimiento}</td>
+                <td>${objetoindividual.sexo}</td>
+                <td>${objetoindividual.direccion}</td>
                 <td>${objetoindividual.nombre}</td>
-                <td>${objetoindividual.descripcion}</td>
-                <td>${objetoindividual.tiempo}</td>
+                <td>${objetoindividual.apellidopaterno}</td>
+                <td>${objetoindividual.apellidomaterno}</td>
+                <td>${objetoindividual.idCarreras}</td>
+                <td>${objetoindividual.nacionalidad}</td>
                 <td>${objetoindividual.usuario}</td>
                 <td>
                     <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
@@ -83,11 +92,20 @@ function  completeDelete(){
 
 // --------------APARTADO DE EDITAR -------------
 
-function mostrarEditarModal(id, nombre, descripcion, tiempo){
+function mostrarEditarModal(id, cedula, correoelectronico, telefono, nombre, telefonocelular, fechanacimiento, sexo, direccion, nombre, apellidopaterno, apellidomaterno, idCarreras, nacionalidad){
     $("#id").val(id);
-    $("#nombre").val(nombre);
-    $("#descripcion").val(descripcion);
-    $("#tiempo").val(tiempo);
+    $('#cedula').val(cedula)
+    $('#correoelectronico').val(correoelectronico),
+    $('#telefono').val(telefono),
+    $('#telefonocelular').val(telefonocelular),
+    $('#fechanacimiento').val(fechanacimiento),
+    $('#sexo').val(sexo),
+    $('#direccion').val(direccion),
+    $('#nombre').val(nombre),
+    $('#apellidopaterno').val(apellidopaterno),
+    $('#apellidomaterno').val(apellidomaterno),
+    $('#idCarreras').val(idCarreras),
+    $('#nacionalidad').val(nacionalidad),
     myModalEditar.show();
 }
 
@@ -97,11 +115,20 @@ $("#btnEditar").click(function (e) {
     e.preventDefault();
     
     var datosEnviar = { 
-        "id":$("#id").val(),
-        "nombre":$("#nombre").val(),
-        "descripcion":$("#descripcion").val(),
-        "tiempo":$("#tiempo").val(),
-        "usuario":"Santiago Ariza"
+        "id": $('#id').val(),
+        "cedula": $('#cedula').val(),
+        "correoelectronico": $('#correoelectronico').val(),
+        "telefono": $('#telefono').val(),
+        "telefonocelular": $('#telefonocelular').val(),
+        "fechanacimiento": $('#fechanacimiento').val(),
+        "sexo": $('#sexo').val(),
+        "direccion": $('#direccion').val(),  
+        "nombre": $('#nombre').val(),
+        "apellidopaterno": $('#apellidopaterno').val(),
+        "apellidomaterno": $('#apellidomaterno').val(),
+        "idCarreras": $('#idCarreras').val(),
+        "nacionalidad": $('#nacionalidad').val(),
+        "usuario": "Santiago Ariza" 
     }
     $.ajax({
         type: "POST",
@@ -119,8 +146,6 @@ $("#btnEditar").click(function (e) {
 
 function completeEdit(){
     modalSuccess.hide();
-    window.location = 'listarCursos.html'
+    window.location = 'listarEstudiantes.html'
 }
 });
-
-

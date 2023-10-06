@@ -3,7 +3,7 @@ var formulario = document.querySelector('formulario');
 const myModalCrear = new bootstrap.Modal(document.getElementById('myModalCrear'));
 
 var apiBase = "https://paginas-web-cr.com/ApiPHP/apis/";
-var apiCrear = "InsertarGrupo.php";
+var apiCrear = "InsertarCursos.php";
 
 var urlCrear = apiBase + apiCrear;
 
@@ -13,6 +13,8 @@ $(document).ready(function () {
         
         var datosEnviar = {
             "nombre": $("#nombre").val(),
+            "descripcion":$("#descripcion").val(),
+            "tiempo":$("#tiempo").val(),
             "usuario": "Santiago Ariza"
         }
 
@@ -30,8 +32,9 @@ $(document).ready(function () {
         });
 
         function completarInsertar(){
-            window.location = 'listarGrupo.html'
+            window.location = 'listarCursoJQ.html'
         }
         
     });
 });
+
