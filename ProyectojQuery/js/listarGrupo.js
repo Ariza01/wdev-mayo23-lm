@@ -8,7 +8,7 @@ var urlBorrar = apibase + apieliminar
 
 const myModalEliminar = new bootstrap.Modal(document.getElementById('myModalEliminar'))
 const myModalEditar = new bootstrap.Modal(document.getElementById('myModalEditar'))
-const modalSuccess = new bootstrap.Modal(document.getElementById('modalSuccess'),);
+const modalSuccess = new bootstrap.Modal(document.getElementById('modalSuccess'))
 
 let tablaresultado = document.querySelector(`#tablaresultado`);
 

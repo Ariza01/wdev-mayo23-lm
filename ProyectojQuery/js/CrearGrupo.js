@@ -30,7 +30,7 @@ $(document).ready(function () {
         });
 
         function completarInsertar(){
-            window.location = 'listarGrupo.html'
+            window.location = 'ListarGrupo.html'
         }
         
     });
