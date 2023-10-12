@@ -113,6 +113,6 @@ $("#btnEditar").click(function (e) {
 
 function completeEdit(){
     modalSuccess.hide();
-    window.location = 'listarGrupo.html'
+    window.location = 'ListarGrupo.html'
 }
 });

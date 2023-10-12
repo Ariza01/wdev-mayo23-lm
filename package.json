@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "g": "^2.0.1",
+    "typecript": "^0.0.1-security"
+  }
+}
