@@ -39,7 +39,7 @@ export class AppComponent implements OnInit{
 
     this.http.get<Respuestacursos>(url).subscribe(
       (response) => {
-        this.arregloDatos = response.data;
+        this.arregloDatos = response.data; 
         console.log(response.data);
       },
       (error) =>{
