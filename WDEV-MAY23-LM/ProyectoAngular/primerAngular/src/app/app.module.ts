@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 //Se necesita el client http
 import { HttpClientModule } from '@angular/common/http';
+import { GrupoComponent } from './grupo/grupo.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GrupoComponent
   ],
   imports: [
     BrowserModule,
