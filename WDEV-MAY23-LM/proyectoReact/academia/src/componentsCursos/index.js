@@ -1,10 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import 'boo'
+import React from 'react';
 
-function App() {
-  return (
-      <div className="container">
+class Index extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    state = {  }
+    render() { 
+        return ( 
+            <div className="container">
                 <h1>Listar Curso</h1>
                 <div className="table-responsive">
                     <table className="table table-success">
@@ -31,10 +34,9 @@ function App() {
                 </div>
                 
             </div>
-    
-  );
+
+         );
+    }
 }
-
-
-export default App;
-
+ 
+export default Index;
